@@ -176,6 +176,6 @@
     display: inline-block;
     width: 224px;
 }
-.task-list__item--edit-mode .task-list__input{
+.task-list__item--edit-mode .task-list__label{
     display: none;
 }
