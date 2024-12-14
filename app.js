@@ -21,7 +21,7 @@ var createNewTaskElement=function(taskString){
     listItem.className = "task-list__item";
 
     //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
+    var checkBox=document.createElement("input");//checkbox
     //label
     var label=document.createElement("label");//label
     //input (text)
@@ -88,10 +88,10 @@ var editTask=function(){
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".task-list__edit-button");
     var containsClass=listItem.classList.contains("task-list__item--edit-mode");
-    //If class of the parent is .editmode
+    //If class of the parent is .task-list__item--edit-mode
     if(containsClass){
 
-        //switch to .editmode
+        //switch to .task-list__item--edit-mode
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -100,7 +100,7 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .editmode on the parent.
+    //toggle .task-list__item--edit-mode on the parent.
     listItem.classList.toggle("task-list__item--edit-mode");
 };
 
@@ -131,7 +131,7 @@ var taskCompleted=function(){
 
 var taskIncomplete=function(){
     console.log("Incomplete Task...");
-//Mark task as incomplete.
+    //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
@@ -174,7 +174,7 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 //for each list item
 for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
-    //bind events to list items chldren(tasksCompleted)
+    //bind events to list items children(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
 
@@ -183,7 +183,7 @@ for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
 //cycle over completedTasksHolder ul list items
 for (var i=0; i<completedTasksHolder.children.length;i++){
-    //bind events to list items chldren(tasksIncompleted)
+    //bind events to list items children(tasksIncomplete)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
 
