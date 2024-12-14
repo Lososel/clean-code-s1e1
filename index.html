@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 
-<body>
+<body class="page">
     <header class="header">
-        <img src="./eisenhower-matrix.jpg">
+        <img class="header__image" src="./eisenhower-matrix.jpg">
         <a 
         class="header__link" 
         href="https://goal-life.com/page/method/matrix-eisenhower">
@@ -19,48 +19,48 @@
     </header>
 
     <main class="main">
-        <section id="topSectionForAddingElementToList">
-            <label for="new-task">Add Item</label>
-            <div class="task-row-wrapper">
-                <input id="new-task"class="task" type="text">
-                <button class="add__button">Add</button>
+        <section id="task-input">
+            <label for="new-task" class="task-input__label">Add Item</label>
+            <div class="task-input__wrapper">
+                <input id="new-task" class="task-input__field" type="text">
+                <button class="task-input__button">Add</button>
             </div>
         </section>
         
-        <section>
-            <h3>Todo</h3>
-            <ul id="incompleteTasks">
-                <li>
-                    <input type="checkbox">
-                    <label class="task">Pay Bills</label>
-                    <input type="text" class="task">
-                    <button class="edit__button">Edit</button>
-                    <button class="delete__button">
+        <section class="task-list">
+            <h3 class="task-list__heading">Todo</h3>
+            <ul class="task-list__items" id="incomplete-tasks">
+                <li class="task-list__item">
+                    <input type="checkbox" class="task-list__checkbox">
+                    <label class="task-list__label">Pay Bills</label>
+                    <input type="text" class="task-list__input">
+                    <button class="task-list__edit-button">Edit</button>
+                    <button class="task-list__delete-button">
                         <img src="./remove.svg">
                     </button>
                 </li>
       
-                <li class="editMode">
-                    <input type="checkbox">
-                    <label class="task">Go Shopping</label>
-                    <input type="text" value="Go Shopping" class="task">
-                    <button class="edit__button">Save</button>
-                    <button class="delete__button">
+                <li class="task-list__item task-list__item--edit-mode">
+                    <input type="checkbox" class="task-list__checkbox">
+                    <label class="task-list__label">Go Shopping</label>
+                    <input type="text" value="Go Shopping" class="task-list__input">
+                    <button class="task-list__edit-button">Save</button>
+                    <button class="task-list__delete-button">
                         <img src="./remove.svg">
                     </button>
                 </li>
             </ul>
         </section>
     
-        <section>
-            <h3>Completed</h3>
-            <ul id="completed-tasks">
-                <li>
-                    <input type="checkbox" checked>
-                    <label class="task">See the Doctor</label>
-                    <input type="text" class="task">
-                    <button class="edit__button">Edit</button>
-                    <button class="delete__button">
+        <section class="task-list task-list--completed">
+            <h3 class="task-list__heading">Completed</h3>
+            <ul class="task-list__items" id="completed-tasks">
+                <li class="task-list__item">
+                    <input type="checkbox" checked class="task-list__checkbox">
+                    <label class="task-list__label">See the Doctor</label>
+                    <input type="text" class="task-list__input">
+                    <button class="task-list__edit-button">Edit</button>
+                    <button class="task-list__delete-button">
                         <img src="./remove.svg">
                     </button>
                 </li>
